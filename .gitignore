@@ -1,0 +1,16 @@
+# Dependancies
+.npm/
+node_modules/
+
+# Editor
+typings/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Coverage
+coverage
+
+# Project specific
