@@ -28,10 +28,10 @@ class Listeners {
 
     // INFO: filter out ones we don't want
     methods = _.filter(methods, (prop) => {
-      return prop !== 'name'
-        && prop !== 'length'
-        && prop !== 'prototype'
-        && prop !== 'getMethods';
+      return prop !== 'name' &&
+        prop !== 'length' &&
+        prop !== 'prototype' &&
+        prop !== 'getMethods';
     });
     return methods;
   }

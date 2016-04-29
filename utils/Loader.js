@@ -2,7 +2,6 @@
 
 // INFO: service-gear specific modules
 const Listeners = require('../libs/Listeners');
-const CoreError = require('../libs/CoreError');
 
 // INFO: common modules
 const async = require('async');

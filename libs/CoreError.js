@@ -10,9 +10,9 @@ class ExtendableError extends Error {
 }
 
 class WebError extends ExtendableError {
-  constructor(type, data) {
+  constructor (type, data) {
     super('constructor'); // TODO: is this correct?
-    this.data = (data) ? data : {};
+    this.data = data || {};
     this.type = type;
     this.message = '\'' + type + '\' error message received';
     let reason = data.details || data.reason;

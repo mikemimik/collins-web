@@ -1,17 +1,13 @@
 'use strict';
 
 // INFO: service-gear specific modules
-const CoreError = require('./CoreError');
 const Loader = require('../utils/Loader');
-const Listeners = require('./Listeners');
 
 // INFO: common modules
 const Emitter = require('events');
 const async = require('async');
-const _ = require('lodash');
 
-// INFO: npm-service-modules
-const Http = require('http');
+module.exports = CollinsWeb;
 
 class CollinsWeb extends Emitter.EventEmitter {
   constructor (config) {
@@ -28,7 +24,7 @@ class CollinsWeb extends Emitter.EventEmitter {
   init (next) {
     async.series([
       Loader.initConfig.bind(this),
-      Lodder.initGear.bing(this),
+      Loader.initGear.bing(this),
       Loader.initCogs.bind(this),
       Loader.initListeners.bind(this)
     ], (err, results) => {
@@ -66,5 +62,3 @@ class CollinsWeb extends Emitter.EventEmitter {
 
   }
 }
-
-module.exports = CollinsWeb;

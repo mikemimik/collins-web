@@ -1,3 +1,3 @@
 'use strict';
 
-let CollinsWeb = module.exports = require('./libs/Core');
+module.exports = require('./libs/Core');
