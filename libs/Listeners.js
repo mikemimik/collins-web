@@ -3,6 +3,8 @@
 // INFO: common modules
 const _ = require('lodash');
 
+module.exports = Listeners;
+
 class Listeners {
 
   static request (request, response) {
@@ -36,5 +38,3 @@ class Listeners {
     return methods;
   }
 }
-
-module.exports = Listeners;

@@ -10,6 +10,8 @@ const _ = require('lodash');
 // INFO: npm-service-module
 const Http = require('http');
 
+module.exports = Loader;
+
 class Loader {
   static initConfig (next) {
     this.logger.gear('CollinsWeb', 'Loader', 'initConfig', 'this:', this); // TESTING
@@ -50,5 +52,3 @@ class Loader {
     });
   }
 }
-
-module.exports = Loader;
