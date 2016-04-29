@@ -21,24 +21,34 @@ class Loader {
 
   static initGear (next) {
 
-    // TODO: pass config options to express()
-    this.Runtime['client'] = Http.createServer();
+    // TODO: find another name for this key
+    this.Runtime['server'] = Http.createServer();
 
     next(null);
   }
 
   static initCogs (next) {
 
-    // TODO: config cogs which will be middleware for express
+    // INFO: cogs will be middleware to use
+    // TODO: figure out how to implement this
     next(null);
   }
 
   static initListeners (next) {
     let listeners = Listeners.getMethods();
     async.each(listeners, (listener, each_cb) => {
-
+      let check = this.Runtime['server'].on(listener, _.bind(Listeners[listener], this));
+      if (check === this.Runtime['server']) {
+        each_cb(null);
+      } else {
+        each_cb(true);
+      }
+    }, (err) => {
+      if (err) {
+        console.log('async.each failed while server.on() was called');
+      }
+      next(err);
     });
-    next(null);
   }
 }
 
