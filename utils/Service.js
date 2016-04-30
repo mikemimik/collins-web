@@ -1,7 +1,7 @@
 'use strict';
 
-module.exports = Service;
-
 class Service {
 
 }
+
+module.exports = Service;
