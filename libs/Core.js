@@ -47,12 +47,12 @@ class CollinsWeb extends Emitter.EventEmitter {
   }
 
   connect (next) {
-
+    this.Runtime['server'].listen(this.config.port);
     next(null);
   }
 
   disconnect (next) {
-
+    this.Runtime['server'].close();
     next(null);
   }
 
