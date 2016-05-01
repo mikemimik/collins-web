@@ -5,8 +5,13 @@ const _ = require('lodash');
 
 class Listeners {
 
+  static listening () {
+    console.log('listening handler (listener) called'); // TESTING
+  }
+
   static request (request, response) {
     console.log('request handler (listener) called'); // TESTING
+    response.end();
   }
 
   static connect (request, socket, head) {
