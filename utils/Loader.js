@@ -43,7 +43,7 @@ class Loader {
       if (check === this.Runtime['server']) {
         each_cb(null);
       } else {
-        each_cb('async.each failed while server.on() was called');
+        each_cb('async.each failed while fn.on() was called');
       }
     }, (err) => {
       if (err) {

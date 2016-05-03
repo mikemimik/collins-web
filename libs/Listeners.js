@@ -6,24 +6,24 @@ const _ = require('lodash');
 class Listeners {
 
   static listening () {
-    this.logger.gear(this.constructor.name, 'Listeners#listening', 'function called');
+    this.logger.gear(this.constructor.name, 'Listeners#listening', 'fn called');
   }
 
   static request (request, response) {
-    this.logger.gear(this.constructor.name, 'Listeners#request', 'function called');
+    this.logger.gear(this.constructor.name, 'Listeners#request', 'fn called');
     response.end();
   }
 
   static connect (request, socket, head) {
-    this.logger.gear(this.constructor.name, 'Listeners#connect', 'function called');
+    this.logger.gear(this.constructor.name, 'Listeners#connect', 'fn called');
   }
 
   static connection (socket) {
-    this.logger.gear(this.constructor.name, 'Listeners#connection', 'function called');
+    this.logger.gear(this.constructor.name, 'Listeners#connection', 'fn called');
   }
 
   static close () {
-    this.logger.gear(this.constructor.name, 'Listeners#close', 'function called');
+    this.logger.gear(this.constructor.name, 'Listeners#close', 'fn called');
   }
 
   static getMethods () {
